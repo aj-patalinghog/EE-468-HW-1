@@ -19,6 +19,7 @@ int main() {
       printf("Child begins:  address of proc_state = %x\n", &proc_state);
       pid_t child_id = getpid();
       // Register sig_handler with the signal SIGUSR1
+      signal(SIGUSR1, sig_handler);
       for(int i = 0; i < 6; i++) {
          printf("Child: proc_state=%d, address=%#x\n", proc_state, &proc_state);
          sleep(1);
@@ -31,6 +32,7 @@ int main() {
          sleep(1);
          printf("Parent: proc_state=%d, address=%#x\n", proc_state, &proc_state);
          // Send a SIGUSR1 signal here
+         kill(pid, SIGUSR1);
       }
       sleep(2);
       wait(NULL);
