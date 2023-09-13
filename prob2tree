@@ -1,0 +1,74 @@
+systemd-+-a.out
+        |-2*[abrt-dump-journ]
+        |-abrtd---3*[{abrtd}]
+        |-agetty
+        |-atd
+        |-auditd-+-sedispatch
+        |        `-2*[{auditd}]
+        |-chronyd
+        |-crond
+        |-dbus-broker-lau---dbus-broker
+        |-gssproxy---5*[{gssproxy}]
+        |-irqbalance---{irqbalance}
+        |-mcelog
+        |-nfsdcld
+        |-polkitd---3*[{polkitd}]
+        |-rngd---4*[{rngd}]
+        |-rpc.idmapd
+        |-rpc.mountd
+        |-rpc.statd
+        |-rpcbind
+        |-rsyslogd---2*[{rsyslogd}]
+        |-2*[sendmail]
+        |-sh---sh-+-ssh
+        |         `-tar---gzip
+        |-smartd
+        |-ssh-agent
+        |-sshd-+-3*[sshd---sshd---sftp-server]
+        |      |-2*[sshd---sshd---bash]
+        |      |-sshd---sshd---csh---vim---{vim}
+        |      `-sshd---sshd---bash---pstree
+        |-sssd-+-sssd_autofs
+        |      |-sssd_be
+        |      |-sssd_nss
+        |      `-sssd_pam
+        |-10*[systemd---(sd-pam)]
+        |-systemd-journal
+        |-systemd-logind
+        |-systemd-oomd
+        |-systemd-resolve
+        |-systemd-udevd
+        |-vim---{vim}
+        `-xinetd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
